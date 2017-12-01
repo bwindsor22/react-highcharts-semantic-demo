@@ -5,6 +5,8 @@ import {
     Switch
  } from 'react-router-dom';
 
+ import ScrollToTop from './ScrollToTop'
+
 import Header from './header.js'
 
 import TiledHeatMap from './tiled-heat-map.js'
@@ -15,17 +17,21 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Router onUpdate={() => window.scrollTo(0, 0)}>
-          <Switch>
+          <Header />
+
+          <Router onUpdate={() => window.scrollTo(0, 0)}>
+            <Switch>
               <Route exact path="/" component={TiledHeatMap} />
               <Route path="/attendance" component={Attendance} />
               <Route path="/flow" component={FlowMap} />
-          </Switch>
-        </Router>
+            </Switch>
+          </Router>
       </div>
     );
   }
 }
 
 export default App;
+
+{/*
+*/}

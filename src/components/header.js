@@ -1,29 +1,23 @@
-import React, { Component } from 'react';
-import {Navbar, NavItem, Nav, NavDropdown, MenuItem} from 'react-bootstrap';
-import {IndexLinkContainer, LinkContainer} from 'react-router-bootstrap';
+import 'semantic-ui-css/semantic.min.css';
 
-import 'bootstrap/dist/css/bootstrap.css';
 
-class Header extends Component {
+import React, { Component } from 'react'
+import { Dropdown, Menu } from 'semantic-ui-react'
+
+export default class MenuExampleSecondary extends Component {
+  state = { activeItem: 'home' }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
+    const { activeItem } = this.state
+
     return (
-
-<Navbar inverse>
-  <Navbar.Header>
-    <Navbar.Brand>
-      <a href="#">Vega Labs</a>
-    </Navbar.Brand>
-  </Navbar.Header>
-  <Nav>
-    <NavItem eventKey={1} href="/">Dwell Times</NavItem>
-    <NavItem eventKey={2} href="/attendance">Attendance</NavItem>
-    <NavItem eventKey={3} href="/flow">Flow</NavItem>
-  </Nav>
-</Navbar>
-
-);
+      <Menu pointing size='large' style={{margin:'0px'}}>
+        <Menu.Item name='Tiled heat map' href='/' active={activeItem === 'Vega Labs'} onClick={this.handleItemClick} />
+        <Menu.Item name='Attendance' href='/attendance' active={activeItem === 'Vega Labs'} onClick={this.handleItemClick} />
+        <Menu.Item name='Flow' href='/flow' active={activeItem === 'Vega Labs'} onClick={this.handleItemClick} />
+      </Menu>
+    )
+  }
 }
-}
-
-export default Header
