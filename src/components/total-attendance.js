@@ -15,13 +15,13 @@ const options = {
       enabled: false
   },
   series: [{
-      name: 'East Mall',
+      name: 'East',
       data: [5, 3, 4, 7, 2]
   }, {
-      name: 'South Mall',
+      name: 'South',
       data: [2, 7, 3, 2, 1]
   }, {
-      name: 'North Mall',
+      name: 'North',
       data: [3, 4, 4, 2, 5]
   }]
 };
