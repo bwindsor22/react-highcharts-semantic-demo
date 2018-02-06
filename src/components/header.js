@@ -14,9 +14,9 @@ export default class MenuExampleSecondary extends Component {
 
     return (
       <Menu pointing size='large' style={{margin:'0px'}}>
-        <Menu.Item name='Tiled heat map' href='/' active={activeItem === 'Vega Labs'} onClick={this.handleItemClick} />
-        <Menu.Item name='Attendance' href='/attendance' active={activeItem === 'Vega Labs'} onClick={this.handleItemClick} />
-        <Menu.Item name='Flow' href='/flow' active={activeItem === 'Vega Labs'} onClick={this.handleItemClick} />
+        <Menu.Item name='Tiled heat map' href='/' onClick={this.handleItemClick} />
+        <Menu.Item name='Attendance' href='/attendance' onClick={this.handleItemClick} />
+        <Menu.Item name='Flow' href='/flow' onClick={this.handleItemClick} />
       </Menu>
     )
   }

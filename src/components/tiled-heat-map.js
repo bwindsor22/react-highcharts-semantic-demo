@@ -8,7 +8,7 @@ const options = {
   },
 
   title: {
-      text: 'Dwell Times by product line'
+      text: 'Concentration by region'
   },
 
   subtitle: {

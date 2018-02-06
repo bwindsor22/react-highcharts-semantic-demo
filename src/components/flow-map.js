@@ -4,7 +4,7 @@ import Chart from './highcharts.js';
 const options = {
 
       title: {
-          text: 'Flow From Entrances to Exits'
+          text: 'Flow between countries'
       },
 
       series: [{
